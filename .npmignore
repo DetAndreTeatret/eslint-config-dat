@@ -1,3 +1,4 @@
 renovate.json
 .gitignore
 node_modules
+.idea
