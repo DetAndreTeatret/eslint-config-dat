@@ -30,7 +30,7 @@ module.exports = {
             }
         }],
         "@stylistic/no-trailing-spaces": "warn",
-        "@stylistic/space-after-keywords": "error",
+        "@stylistic/keyword-spacing": "error",
         "@stylistic/padding-line-between-statements": ["error", // Order is important!
             {"blankLine": "always", "prev": "import", "next": "*"},
             {"blankLine": "never", "prev": "import", "next": "import"},
