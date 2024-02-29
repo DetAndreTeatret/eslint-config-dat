@@ -2,7 +2,8 @@ module.exports = {
     "parser": "@typescript-eslint/parser",
     "plugins": [
         "@typescript-eslint",
-        "jsdoc"
+        "jsdoc",
+        "@stylistic"
     ],
     "extends": [
         "eslint:recommended",
@@ -10,8 +11,8 @@ module.exports = {
         "plugin:@typescript-eslint/recommended"
     ],
     "rules": {
+        // CODE
         "@typescript-eslint/ban-ts-comment": "off",
-        "semi": ["warn", "never"],
         "no-duplicate-imports": "error",
         "no-self-compare": "error",
         "no-unreachable-loop": "error",
@@ -19,20 +20,26 @@ module.exports = {
         "eqeqeq": ["error", "smart"],
         "no-lone-blocks": "error",
         "no-var": "error",
-        "spaced-comment": ["warn", "always", {
+        "eol-last": "warn",
+
+        // CODE STYLE
+        "@stylistic/semi": ["warn", "never"],
+        "@stylistic/spaced-comment": ["warn", "always", {
             "block": {
                 "balanced": true
             }
         }],
-        "eol-last": "warn",
-        "no-trailing-spaces": "warn",
-        "quotes": ["warn", "double"], // Template literals are allowed
-        "padding-line-between-statements": ["error", // Order is important!
+        "@stylistic/no-trailing-spaces": "warn",
+        "@stylistic/space-after-keywords": "error",
+        "@stylistic/padding-line-between-statements": ["error", // Order is important!
             {"blankLine": "always", "prev": "import", "next": "*"},
             {"blankLine": "never", "prev": "import", "next": "import"},
             {"blankLine": "always", "prev": "*", "next": "function"}, // TODO: how to make this ignore export
             {"blankLine": "always", "prev": "*", "next": "class"}
         ],
+        "@stylistic/quotes": ["warn", "double"], // Template literals are allowed,
+
+        // JSDOC
         "jsdoc/no-undefined-types": "warn"
     }
 }
