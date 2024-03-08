@@ -10,6 +10,6 @@
     "@typescript-eslint/parser": "7.1.1",
     "@stylistic/eslint-plugin": "1.6.3",
     "eslint": "8.57.0",
-    "eslint-plugin-jsdoc": "48.2.0"
+    "eslint-plugin-jsdoc": "48.2.1"
   }
 }
