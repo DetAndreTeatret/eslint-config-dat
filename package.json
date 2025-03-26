@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-dat",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "description": "eslint standard config for DAT",
   "main": "main.js",
   "author": "Simon Mørland",
