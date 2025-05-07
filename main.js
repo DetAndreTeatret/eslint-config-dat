@@ -1,16 +1,25 @@
+import jsdoc from "eslint-plugin-jsdoc"
+import stylistic from "@stylistic/eslint-plugin"
+import typescriptEslint from "@typescript-eslint/eslint-plugin"
+
+import parser from "@typescript-eslint/parser"
+
+import js from "@eslint/js";
+import tseslint from "typescript-eslint"
+
 export default [
+    js.configs.recommended,
+    tseslint.configs.recommended,
+    tseslint.configs.eslintRecommended,
     {
-        parser: "@typescript-eslint/parser",
-        plugins: [
-            "@typescript-eslint",
-            "jsdoc",
-            "@stylistic"
-        ],
-        extends: [
-            "eslint:recommended",
-            "plugin:@typescript-eslint/eslint-recommended",
-            "plugin:@typescript-eslint/recommended"
-        ],
+        languageOptions: {
+            parser: parser
+        },
+        plugins: {
+            "@typescript-eslint": typescriptEslint,
+            "jsdoc": jsdoc,
+            "@stylistic": stylistic
+        },
         rules: {
             // CODE
             "@typescript-eslint/ban-ts-comment": "off",
