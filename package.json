@@ -7,7 +7,7 @@
   "author": "Simon Mørland",
   "license": "MIT",
   "dependencies": {
-    "@eslint/js": "^9.26.0",
+    "@eslint/js": "^10.0.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@typescript-eslint/eslint-plugin": "^8.32.0",
     "@typescript-eslint/parser": "^8.32.0",
@@ -15,6 +15,6 @@
     "typescript-eslint": "^8.32.0"
   },
   "peerDependencies": {
-    "eslint": "^9.26.0"
+    "eslint": "^9.26.0 || ^10.0.0"
   }
 }
