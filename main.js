@@ -21,7 +21,6 @@ export default [
             "eqeqeq": ["error", "smart"],
             "no-lone-blocks": "error",
             "no-var": "error",
-            "eol-last": "warn",
 
             // CODE STYLE
             "@stylistic/semi": ["warn", "never"],
@@ -35,10 +34,11 @@ export default [
             "@stylistic/padding-line-between-statements": ["error", // Order is important!
                 {"blankLine": "always", "prev": "import", "next": "*"},
                 {"blankLine": "never", "prev": "import", "next": "import"},
-                {"blankLine": "always", "prev": "*", "next": "function"}, // TODO: how to make this ignore export
+                {"blankLine": "always", "prev": "*", "next": ["function", "ExportNamedDeclaration > FunctionDeclaration"]},
                 {"blankLine": "always", "prev": "*", "next": "class"}
             ],
             "@stylistic/quotes": ["warn", "double"], // Template literals are allowed,
+            "@stylistic/eol-last": "warn",
 
             // JSDOC
             "jsdoc/no-undefined-types": "warn"
