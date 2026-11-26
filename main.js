@@ -34,7 +34,8 @@ export default [
             "@stylistic/padding-line-between-statements": ["error", // Order is important!
                 {"blankLine": "always", "prev": "import", "next": "*"},
                 {"blankLine": "never", "prev": "import", "next": "import"},
-                {"blankLine": "always", "prev": "*", "next": ["function", "ExportNamedDeclaration > FunctionDeclaration"]},
+                {"blankLine": "always", "prev": "*", "next": "function"},
+                {"blankLine": "always", "prev": "*", "next": "ExportNamedDeclaration > FunctionDeclaration"},
                 {"blankLine": "always", "prev": "*", "next": "class"}
             ],
             "@stylistic/quotes": ["warn", "double"], // Template literals are allowed,
